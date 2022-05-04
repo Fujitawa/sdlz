@@ -272,6 +272,7 @@ ul.list {
 
 .avatar img {
     max-width: 180px;
+    border-radius: var(--rounded);
 }
 
 .me * {
