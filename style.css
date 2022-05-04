@@ -78,8 +78,6 @@ h5 {
 }
 
 sup {
-    margin-right: 1em;
-    position: absolute;
     color: var(--sup);
     font-weight: 500;
 }
@@ -241,9 +239,7 @@ ul.list {
     margin-top: 3em;
 }
 
- span.fo {
-    margin-left: 5em;
-}
+
 
 
 /* logo  and ava */
