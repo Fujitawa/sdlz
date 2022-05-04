@@ -1,0 +1,310 @@
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>lab</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="fav.png" rel="shortcut icon" type="image/x-icon" />
+
+ </head>
+ <body>  
+
+  <div class=cc>
+   <label class="mode" for="checkbox">
+    <input type="checkbox" id="checkbox">
+    <span class="ripplelink">
+     <span class="material-icons"> nights_stay </span>
+    </span>
+  </div>
+  <script src="https://code.jquery.com/jquery-1.11.2.min.js"></script>
+ 	
+			<script>
+			
+$(document).ready(documentReady);
+
+function documentReady()
+{
+
+	var characterCollection 	= ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "R", "S", "T", "U", "V", "Y", "Z"];
+
+	var currentText 			= $(".abbr").text();
+
+	var currentTextCollection 	= new Array();
+
+	var characterCount			= 0;
+
+	var characterSpeed			= 70;
+
+	pushCurrentTextChrachters();
+
+	function pushCurrentTextChrachters () {
+
+		for(var i = 0; i < currentText.length; i++)
+		{
+
+			var currentCharacter = currentText.slice(i, i+1);
+
+			currentTextCollection.push(currentCharacter);
+
+		}
+
+	}
+
+	var characterCountIncreaseInterval = setInterval(characterCountIncrease, characterSpeed);
+
+	function characterCountIncrease () {
+
+		if (characterCount == currentTextCollection.length)
+		{
+
+			clearInterval(characterCountIncreaseInterval);
+
+			clearInterval(setRandomTextInterval);
+
+		}
+
+		characterCount++;
+
+	}
+
+	function getRandomText () {
+
+		var result = "";
+
+		if(characterCount == 0)
+		{
+
+			for(var i = 0; i < currentTextCollection.length; i++)
+			{
+
+				var randomCharacter = characterCollection[ Math.floor( Math.random() * characterCollection.length ) ];
+
+				result += randomCharacter;
+
+			}
+
+		}
+		else
+		{
+
+			result = currentText.slice(0, characterCount);
+
+			for(var i = 0; i < currentTextCollection.length - characterCount; i++)
+			{
+
+				var randomCharacter = characterCollection[ Math.floor( Math.random() * characterCollection.length ) ];
+
+				result += randomCharacter;
+
+			}
+
+		}
+
+		return result;
+
+	}
+
+	var setRandomTextInterval = setInterval(setRandomText, 50);
+
+	function setRandomText () {
+
+		console.log(getRandomText());
+
+		$(".abbr").text(getRandomText());
+
+	}
+
+}
+</script>
+<div class="colums">
+	<div class="avatar"> <img src="https://profilepicsbucket.crossfit.com/7b3b4-P1169666_1-184.jpg">
+<div class="me">
+	<span> Ladjie Niakate </span>
+	<div class="social">
+	<span> <a href="https://www.instagram.com/sdlzcoachingsportif/"><ion-icon name="logo-instagram"></ion-icon> </a> </span>
+	<span> <a href="#"><ion-icon name="logo-facebook"></ion-icon> </a> </span>
+	<span> <a href="https://fr.linkedin.com/in/ladjie-niakate-560a66177/"><ion-icon name="logo-linkedin"></ion-icon> </a> </span>
+
+</div>
+
+</div>
+	</div>
+<div class="logo">
+	<div class="sdlz">SDLZ</div>
+	<div class="lines"><span class="first-line"></span> <span class="second-line"></span> <span class="third-line"></span></div>
+<div class="abbr">
+
+				<span>SORS DE LA ZONE</span>
+
+			</div>
+			</div>
+			</div>
+
+  <div class="container">
+
+	  
+   <h4 class="hr"> <span class="material-icons"> assignment_ind </span> À propos  </h4>
+   <ul class="list">
+    <li>
+     <p>Spécialiste dans l’accompagnement des débutants et professionnels, malade ou bien portant. A l’écoute pour vous, nous adaptons les exercices afin d’améliorer votre conditions physiques rapidement. Des conseils qui vous permettront de vous sentir mieux au quotidiens. Réservation de la structure pour du coaching privé jusqu’à 4 personnes ou du cours collectif pour un max de 6 personnes par cours. Un lieu discret où vous pouvez relâchez toutes vos tensions. Test de la condition physique afin d’élaborer des programmes adapté à la personne. Suivi personnalisé ! Projet pour un marathon, un besoin d’aide pour développer ces capacités physiques dans n’importe quelle domaine contactez-nous !</p>
+    </li>
+    
+   </ul>
+
+
+      <h4 class="hr"> <span class="material-icons">
+school
+</span> Formation </h4>
+   <ul class="list oo">
+    <li>
+     <sup> 2020 </sup> <span class="fo"> <h5> Insep:  </h5>  Coach muscu santé \ Sport ♦ Favorable </span> 
+ </li>
+     <li>
+     <sup> 2019 </sup> <span class="fo"> <h5> FMS (fonctionnal mouvement screen):  </h5>  LV1 et LV2 ♦  Santé et éducation physique / fitness</span> 
+
+ </li>
+
+ <li>
+     <sup> 2018\19 </sup> <span class="fo"> <h5> PSL76:  </h5>  BPJEPS ♦ Santé et éducation physique / fitness </span>
+
+ </li>
+
+
+ <li>
+     <sup> 2018 </sup>  <span class="fo"> <h5> Coach haltéro:</h5>  diplôme fédéral  ♦ haltérophilie </span>
+ </li>
+
+</ul>
+
+   <h4 class="hr"> <span class="material-icons">
+contacts
+</span> Nos coordonnées </h4>
+   <ul class="list">
+    <li>
+     <span class="material-icons">
+my_location
+</span> 35 bis Rue des Prés, 27950 Saint-Marcel
+    </li>
+      <li>
+     <span class="material-icons">
+call
+</span> 06 58 39 02 18
+    </li>
+    
+   </ul>
+   
+ 
+	  
+<h4 class="hr"> <span class="material-icons">
+schedule </span> Horaires </h4>
+<ul> <li>lundi	08:00 – 21:00</li>
+<li>mardi	08:00 – 21:00</li>
+<li>mercredi 08:00 – 21:00</li>
+<li>jeudi	08:00 – 21:00</li>
+<li>vendredi 08:00 – 21:00</li>
+<li>samedi	08:00 – 13:00</li>
+<li>dimanche 09:00 – 12:00</li></ul>
+
+
+<h4 class="hr"> <span class="material-icons">
+workspaces
+ </span> FEED </h4>
+
+
+	  
+<style>.instawall-root28611{min-height:80px;margin:0 auto}</style><script>window['instawall28611']={"token":"Z1FmRWPhUzKdC2dndhrHPd+u13JeMhucHTZpcmW4scmkCWWk1EwxjnOIqtIz80PPgKXzQWDGfervt795iYvu2Mtxz1DiCrw5tqE47sfpVdOV1g==","root_tagid":"instawall-root28611","card_padding":"5","card_border_radius":"5","card_count":"3","layout_max_width":"1000","count_post":"12","header_text_size":"20","header_text_color":"#000000","header_logo_size":"50","header_button_text":"Подписаться","header_button_text_size":"12","header_button_text_color":"#ffffff","header_button_background_color":"#0095f6","hide_groupname":"1","hide_text":"0","hide_shadow":"0","show_header":"0","show_header_logo":"1","show_header_button":"1"};</script><div id="instawall-root28611" class="instawall instawall-root28611"></div><script>(function(d, s, id){ var js, dfjs = d.getElementsByTagName(s)[0]; if (d.getElementById(id)) {return;} js = d.createElement(s); js.id = id; js.setAttribute("data-scriptid", "28611"); js.src = "https://socactive.com/widgets/instawall/i.js?id=28611&r="+Math.random(); dfjs.parentNode.insertBefore(js, dfjs); }(document, "script", "instawall-export28611"));</script><style>.tabs-md-bars{display:none}</style><div class="tabs-md-bars"><a href="https://contentuniq.com/">антиплагиат</a>.</div>
+
+
+   <div class="toggles">
+	<details>
+		<summary>AVIS </summary>
+		<div>
+ <div class="reviews">
+<fieldset>
+   <legend> Elodie <span class="material-icons">star</span><span class="material-icons">star</span><span class="material-icons">star</span><span class="material-icons">star</span><span class="material-icons">star</span>  </legend>
+Excellent coach, il est professionnel et surtout à l’écoute des besoins de chacun. Il offre des services de haute qualité ! Je vous le recommande les yeux fermés
+ 	 </fieldset>
+  
+  <fieldset>
+   <legend> Damarisse <span class="material-icons">star</span><span class="material-icons">star</span><span class="material-icons">star</span><span class="material-icons">star</span><span class="material-icons">star</span> </legend>
+Très bon coach, avec lequel travaille rime avec joie. Grâce à son professionnalisme j’ai pu perdre 10 kilos en l’espace de 4 mois. N’hésitez pas et foncez il est vraiment top dans son domaine.
+ 	 </fieldset>
+  
+  
+  <fieldset>
+   <legend> Ibrahima  <span class="material-icons">star</span><span class="material-icons">star</span><span class="material-icons">star</span><span class="material-icons">star</span><span class="material-icons">star</span></legend>
+Le coach m'a permis atteindre mes objectifs avec un suivi régulier et rigoureux. Très à l'écoute de mes besoins. Je vous le conseille très fortement. Merci ladjie
+ 	 </fieldset>
+  
+  <fieldset>
+   <legend> Laurine <span class="material-icons">star</span><span class="material-icons">star</span><span class="material-icons">star</span><span class="material-icons">star</span><span class="material-icons">star</span> </legend>
+Je vous recommande SDLZ coaching les yeux fermés ! J’ai obtenu des résultats dès le premier mois ! Coachings toujours dans la joie et la bonne humeur, dynamiques et efficaces. Coach accessible, à l’écoute, qui s’adapte à chacun et qui assure un suivi même après les séances, c’est clairement le meilleur dans son domaine ! SDLZ m’a réconcilié avec le sport ! Foncez vous ne le regretterez pas !!! 	 </fieldset>
+
+  </div> 
+
+
+ </div>
+
+</div>
+
+	  
+  
+
+
+
+
+
+
+   
+	    <center>
+
+    <h3> ... </h3>
+   </center>
+  </div>
+  <script>
+   /* Тема  */
+   const toggleSwitch = document.querySelector('.mode input[type="checkbox"]');
+   const currentTheme = localStorage.getItem('theme');
+   if (currentTheme) {
+    document.documentElement.setAttribute('data-theme', currentTheme);
+    if (currentTheme === 'dark') {
+     toggleSwitch.checked = true;
+    }
+   }
+
+   function switchTheme(e) {
+    if (e.target.checked) {
+     document.documentElement.setAttribute('data-theme', 'dark');
+     localStorage.setItem('theme', 'dark');
+    } else {
+     document.documentElement.setAttribute('data-theme', 'light');
+     localStorage.setItem('theme', 'light');
+    } 
+   }
+   toggleSwitch.addEventListener('change', switchTheme, false);
+   /* Клик */
+   var links = document.querySelectorAll('.ripplelink');
+   for (var i = 0, len = links.length; i < len; i++) {
+    links[i].addEventListener('click', function(e) {
+     var targetEl = e.target;
+     var inkEl = targetEl.querySelector('.ink');
+     if (inkEl) {
+      inkEl.classList.remove('animate');
+     } else {
+      inkEl = document.createElement('span');
+      inkEl.classList.add('ink');
+      inkEl.style.width = inkEl.style.height = Math.max(targetEl.offsetWidth, targetEl.offsetHeight) + 'px';
+      targetEl.appendChild(inkEl);
+     }
+     inkEl.style.left = (e.offsetX - inkEl.offsetWidth / 2) + 'px';
+     inkEl.style.top = (e.offsetY - inkEl.offsetHeight / 2) + 'px';
+     inkEl.classList.add('animate');
+    }, false);
+   }
+  </script>
+
+  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+ </body>
+</html>

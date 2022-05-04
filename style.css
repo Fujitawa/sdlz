@@ -1,0 +1,363 @@
+@import url("https://fonts.googleapis.com/icon?family=Material+Icons");
+@import url('https://fonts.googleapis.com/css2?family=El+Messiri:wght@400;500;600;700&family=Roboto+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;1,100;1,200;1,300;1,400;1,500&display=swap');
+
+
+:root {
+    --cover: url('https://randart.ru/art/Fujita/cover/');
+    --bg: white;
+    --font-color: black;
+    --font: 'Roboto Mono', monospace;
+    --font-h4:'El Messiri', sans-serif;
+   /*--font: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";*/
+    --btn: #5f5f5f;
+    --ripple: #c3c3c3d1;
+    --rounded: 10em;
+    --link: #4f5c81; 
+    --link-hover:#b70000;
+    --hr: #d1ce7b57;
+    --cite:red;
+    --spoil:#e8e5e5;
+    --sup:#5b8a6d;
+    --first-line:#9494f4;
+    --second-line:white;
+    --third-line:#eb7b7b;
+    --first-line:#184ce0;
+    --second-line:#afafaf;
+    --third-line:red;
+
+ 
+}
+
+[data-theme="dark"] {
+    --bg: #202124f6;
+    --font-color: white;
+    --btn: whitesmoke;
+    --link: #ebe3bb; 
+    --link-hover: #78ffd6;
+    --hr: #bac3ff63;
+    --cite:greenyellow;
+    --spoil:#5a69778a;
+    --sup:#dfe0b5;
+    --first-line:#9494f4;
+    --second-line:white;
+    --third-line:#eb7b7b;
+}
+
+body {
+        /*background: var(--cover);*/
+        color: var(--font-color);
+        background-size: cover;
+        background-attachment: fixed;
+        font-family: var(--font);
+
+}
+
+
+body:after {
+    background: var(--bg);
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    content: '';
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+}
+
+
+h4 {
+    font-family:var(--font-h4);
+        text-transform: uppercase;
+}
+
+h5 {
+    margin: 0;
+    display: initial;
+    font-size: 17px;
+}
+
+sup {
+    margin-right: 1em;
+    position: absolute;
+    color: var(--sup);
+    font-weight: 500;
+}
+
+
+
+
+a {
+    text-decoration:none;
+    transition: 1.2s all;
+}
+
+a {
+    color: var(--link);
+}
+
+ a:hover {
+    color: var(--link-hover);
+}
+
+cite {
+    color: var(--cite);
+    font-style: normal;
+}
+
+.container {
+    max-width: 1012px;
+    margin-right: auto;
+    margin-left: auto;
+    font-size: 16px;
+    line-height: 1.5;
+    word-wrap: break-word;
+    z-index: 111;
+    position: relative;
+    border-left: 1px solid var(--hr);
+}
+
+.container h3 {
+        margin-top: 24px;
+        margin-bottom: 16px;
+        font-weight: 600;
+        line-height: 1.25;
+}
+
+.cc {
+    width: 30px;
+    position: relative;
+    z-index: 111;
+}
+
+.mode input#checkbox {
+        display: none;
+}
+
+label.mode {
+        color: var(--btn);
+        cursor: pointer;
+        user-select: none;
+}
+
+
+
+/* Ripple */
+
+.animate {
+        animation: ripple 0.65s linear;
+}
+
+@keyframes ripple {
+        100% {
+                opacity: 0;
+                transform: scale(2.5);
+        }
+}
+
+.ripplelink {
+    display: block;
+    position: relative;
+    overflow: hidden;
+    transition: all 0.4s ease;
+    z-index: 0;
+    text-align: center;
+    border-radius: var(--rounded);
+}
+
+.ink {
+        display: block;
+        position: absolute;
+        background: var(--ripple);
+        border-radius: 100%;
+        transform: scale(0);
+}
+
+.hr {
+    border: var(--hr) 1px solid;
+    width: max-content;
+    text-align: center;
+    padding: 5px 10px 0 10px;
+    border-left: 0;
+}
+.hr span.material-icons, li span.material-icons {
+    vertical-align: sub;
+    font-size: 21px;
+}
+
+
+
+
+
+
+ul.list {
+    list-style: none;
+}
+/* spoils */
+
+
+ .toggles {
+     color: var(--font-color);
+}
+ .toggles details {
+     margin-bottom: 0.75rem;
+}
+ .toggles details > div {
+     margin-left: 2rem;
+     padding: 1rem 0;
+}
+.toggles details summary {
+    border: 1px solid var(--spoil);
+    padding: 1rem 2rem;
+    cursor: pointer;
+    list-style: none;
+    outline: none;
+    position: relative;
+    transition: color 0.2s;
+    border-left: 0;
+    border-radius: 0 8px 8px 0;
+}
+ .toggles details summary::-webkit-details-marker {
+     display: none;
+}
+ .toggles details summary::before {
+     content: "\e145";
+     font-family: 'Material Icons';
+     position: absolute;
+     top: 50%;
+     right: 2rem;
+     transform: translateY(-50%);
+}
+
+
+ .toggles details[open] summary::before {
+     content: "\e15b";
+}
+
+
+/* formation  */
+
+.oo li:not(:first-child) {
+    margin-top: 3em;
+}
+
+ span.fo {
+    margin-left: 5em;
+}
+
+
+/* logo  and ava */
+.colums {
+    z-index: 1;
+    position: relative;
+    display: flex;
+    max-width: 1012px;
+    margin: 0 auto;
+}
+
+.logo {
+    
+    position: relative;
+    text-align: center;
+    max-width: 200px;
+    margin: 0 auto;
+    order: 1;
+}
+
+.sdlz {
+    font-size: 28px;
+}
+
+
+.avatar {
+    order: 2;
+}
+
+
+.avatar img {
+    max-width: 180px;
+}
+
+.me * {
+    margin-top: 0.3em;
+}
+.me {
+    display: flex;
+    flex-direction: column;
+}
+
+
+.social {
+    text-align: center;
+}
+
+/* lines  */
+
+.lines {
+    display: flex;
+    justify-content: center;
+}
+
+
+
+
+.first-line, .second-line, .third-line  {
+    width: 60px;
+    height: 2px;
+    position: relative;
+    display: block;
+    z-index: 11;
+}
+
+
+
+.first-line {
+    background: var(--first-line);
+}
+
+
+
+
+.second-line {
+    background: var(--second-line);
+}
+
+
+
+.third-line {
+    background: var(--third-line);
+}
+
+/* reviews  */
+
+
+
+
+legend .material-icons {
+    font-size: 20px;
+    color: #48b02b;
+}
+
+.reviews {
+    display: flex;
+    gap: 1em;
+    margin: 0 auto;
+    flex-flow: row wrap;
+    margin-top: 5em;
+    place-content: center;
+    color: var(--font-color);
+    align-items: flex-start;
+}
+
+.reviews fieldset {
+    width: 200px;
+    border-radius: .2em;
+    border: 1px solid;
+}
+
+
+
+.reviews fieldset:hover {
+    border-color: chocolate;
+    color:var(--font-color);
+}
